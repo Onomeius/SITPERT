@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Iniciar Sesión</title>
+	<!----CSS link----->
+	<link rel="stylesheet" href="css/form2.css">
+	<!----FontAwesome CDN Link---->
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="icon" href="images/Circular.png">
+</head>
+
+<body>
+	<img src="images/wave-01.png" class="wave">
+	<div class="container">
+		<div class="img">
+			<img src="images/phone.png">
+		</div>
+		<div class="login-content">
+			<form action="admin.php" method="POST" onsubmit="return confirmation()" class="form-login">
+				<img src="images/Circular.png">
+				<h2 class="title">Bienvenidos</h2>
+				<div class="input-div one">
+					<div class="i">
+						<i class="fas fa-user"></i>
+					</div>
+					<div class="div">
+						<input type="text" placeholder="Ingrese Su Correo" name="correo" id="correo" style="color: rgb(0, 0, 0);" >
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="i">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<input type="password" name="contrasena" id="myInput" placeholder="Contraseña" style="color: rgb(0, 0, 0);">
+					</div>
+				</div>
+				<input type="checkbox" onclick="myFunction()"><span style="color: rgb(0, 0, 0);"> Mostrar
+					Contraseña</span>
+				<script>
+					function myFunction() {
+						var x = document.getElementById("myInput");
+						if (x.type === "password") {
+							x.type = "text";
+						} else {
+							x.type = "password";
+						}
+					}
+				</script>
+				<script type="text/javascript">
+					function confirmation() {
+						if (confirm("Esta seguro de los datos ingresados???")) {
+							return true(alert("Datos Recibidos"));
+						}
+						else {
+							return false; (alert("INGRESE BIEN SUS DATOS"));
+						}
+					}
+				</script>
+				<button type="submit" class="btn" value="Login">Iniciar Sesión</button>
+				<button type="reset" class="btn" value="Limpiar">Limpiar</button>
+				<a href="recupera.html">¿No Recuerdas la Contraseña?</a>
+				<a href="index.html">Volver a la Pagina de inicio</a>
+			</form>
+		</div>
+	</div>
+
+
+	<!---JS CDN Link---->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!--Custom File Link--->
+	<script src="js.js"></script>
+</body>
+
+</html>

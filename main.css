@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(docs/abstract-white-minimalist-style-background-free-vector.jpg);
+    color: #fff;
+    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 1.5em;
+}
+
+button {
+    background: #ffffff;
+    ;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    padding: 1em;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+a {
+    color: #000000;
+}
+
+a:hover {
+    color: #1c9dbd;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span {
+    color: #000000;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper>* {
+    padding: 1em;
+}
+
+.contact-form form {
+    color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #000000;
+}
+
+.contact-form form button {
+    background: #ffffff;
+    ;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    color: #000000;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+    color: #000000;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .contact-wrapper>* {
+        padding: 2em;
+    }
+
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        color: #000000;
+        text-align: left;
+    }
+}

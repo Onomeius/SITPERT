@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recuperacion de Credenciales</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/Circular.png">
+    
+    <!-- GOOGLE FONTs -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<body>
+
+    <div class="content">
+
+        <h1 class="logo"><IMG SRC="docs/Circular.png" width="5%"><span> Recupera Tu Cuenta </span><IMG
+                SRC="docs/Circular.png" width="5%"></h1>
+
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <h3 style="color: black">Recuperación de Credenciales</h3>
+                <form action="" onsubmit="return confirmation()">
+                    <p>
+                        <label>Nombre</label>
+                        <input type="text" name="fullname">
+                    </p>
+                    <p>
+                        <label>Apellido</label>
+                        <input type="text" name="fullname">
+                    </p>
+                    <p>
+                        <label>Numero de teléfono</label>
+                        <input type="tel" name="phone">
+                    </p>
+                    <p>
+                        <label>Cédula</label>
+                        <input type="text" name="email">
+                    </p>
+                    <p>
+                        <label>Correo de contacto</label>
+                        <input type="email" name="phone">
+                    </p>
+                    <p>
+                        <label>Correo de Soporte</label>
+                        <input type="email" name="phone">
+                    </p>
+                    <p class="block">
+                        <label>Descripción de la Problemática</label>
+                        <textarea name="message" rows="3"></textarea>
+                    </p>
+                    <p class="btn">
+                        <button  onclick="myFunction()">
+                            Enviar
+                        </button>
+                    </p>
+                    <p class="btn">
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                </form>
+                <center><p class="btn-block">
+                    <button class="btn" onclick="window.location.href='index.html'">
+                        Volver a la Pagina
+                    </button>
+                </p></center>
+                
+            </div>
+            <div class="contact-info">
+                <h3 style="color: black">Información de Soporte</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope-open-text"></i> sitpertsoporte@gmail.com</li>
+                    </ul>
+                    <center><IMG SRC="docs/5138237-PhotoRoom.png-PhotoRoom.png" width="50%"></center>
+                    <p> Después de enviar su Correo con la problemática aproximadamente en un plazo de 24horas o menor
+                        le estarán respondiendo a su petición.</p>
+                    <p>EiseGroup - 2023</p>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        function confirmation() {
+            if (confirm("Esta seguro de los datos ingresados???")) {
+                return true(alert("Enviada su petición"));
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="node_modules/bootstrap/dist/js/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="node_modules/bootstrap/dist/js/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

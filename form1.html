@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="Stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="images/Circular.png">
+    <script src="funn.js.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        function validarFormulario() {
+          var password1 = document.getElementById("int_contra").value;
+          var password2 = document.getElementById("int_contra1").value;
+        
+          if (password1 != password2) {
+            alert("Las contraseñas ingresadas no coinciden");
+            return false;
+          }
+        
+          return true;
+        }
+        </script>
+        
+
+    <title>Registro</title>
+</head>
+
+<body>
+    <section class="contact-box">
+        <div class="row no-gutters bg-dark">
+            <div class="col-xl-5 col-lg-12 register-bg">
+                <div class="position-absolute testiomonial p-4">
+                    <h3 class="font-weight-bold text-light">La siguiente revolución digital.</h3>
+                    <p class="lead text-light">La nueva etapa de la revolución digital se aproxima.</p>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-12 d-flex">
+                <div class="container align-self-center p-6">
+                    <h1 class="font-weight-bold mb-3">
+                        <font color=white>Registro de usuario
+                    </h1>
+                    </font>
+                    <p class="text-muted mb-5">
+                        <font color=white>Ingresa la siguiente información para registrarte.</font>
+                    </p>
+
+                    <form id="formulario" action="registrar.php" method="post" onsubmit="return validarFormulario()">
+                        <div class="form-row mb-2">
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">
+                                    <font color=white>Nombre <span class="text-danger">*</span></font>
+                                </label></font>
+                                <input type="text" class="form-control" id="txt_nombre" name="txt_nombre"
+                placeholder="nombre" style="background-color: rgb(255, 255, 255);" required
+                pattern="[A-Za-z ]{3,}" title="El nombre debe tener al menos 3 letras y solo puede contener letras">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">
+                                    <font color=white>Apellido <span class="text-danger">*</span>
+                                </label></font>
+                                <input type="text" class="form-control" id="txt_apellido" name="txt_apellido"
+                placeholder="apellido" style="background-color: rgb(255, 255, 255);"required
+                pattern="[A-Za-z ]{3,}" title="El apellido debe tener al menos 3 letras y solo puede contener letras">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">
+                                    <font color=white>Numero de Teléfono <span class="text-danger">*</span>
+                                </label></font>
+                                <input type="number" class="form-control" id="int_num" name="int_num" placeholder="Numero de teléfono"
+       style="background-color: rgb(255, 255, 255);" required minlength="11" maxlength="18" 
+       pattern="^[0-9]{1,}$" title="El número de teléfono debe tener solo dígitos">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="font-weight-bold">
+                                    <font color=white>Nombre de usuario <span class="text-danger">*</span>
+                                </label></font>
+                                <input type="text" class="form-control" id="txt_usuario" name="txt_usuario"
+                placeholder="Nombre de Usuario"style="background-color: rgb(255, 255, 255);" required
+                pattern="[A-Za-z0-9_-]{3,}" title="El nombre de usuario debe tener al menos 3 caracteres y solo puede contener letras, números, guiones y guiones bajos">
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">
+                                <font color=white>Cédula de Identidad <span class="text-danger">*</span>
+                            </label></font>
+                            <input type="number" class="form-control" id="int_ced" name="int_ced" placeholder="Cédula de Identidad" 
+       style="background-color: rgb(255, 255, 255);" required minlength="7" maxlength="8" 
+       pattern="^[0-9]{7,8}$" title="La cédula de identidad debe tener 7 u 8 dígitos">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">
+                                <font color=white>Correo electrónico <span class="text-danger">*</span>
+                            </label></font>
+                            <input type="email" class="form-control" id="txt_email" name="txt_email"
+    placeholder="correo electrónico" style="background-color: rgb(255, 255, 255);" required
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="font-weight-bold">
+                                <font color=white>Contraseña <span class="text-danger">*</span>
+                            </label></font>
+                            <input type="password" class="form-control" id="int_contra" name="int_contra"
+                            placeholder="contraseña" required minlength="6" maxlength="20" style="background-color: rgb(255, 255, 255);">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="font-weight-bold">
+                            <font color=white>Confirme Contraseña <span class="text-danger">*</span></label></font>
+                            <input type="password" class="form-control" id="int_contra1" name="int_contra1"
+                            placeholder="contraseña" required minlength="6" maxlength="20" style="background-color: rgb(255, 255, 255);">
+                    </div>
+                    
+                    <script>
+                        function mostrarContrasena() {
+                            var x = document.getElementById("int_contra");
+                            var y = document.getElementById("int_contra1");
+                            if (x.type === "password") {
+                                x.type = "text";
+                                y.type = "text";
+                            } else {
+                                x.type = "password";
+                                y.type = "password";
+                            }
+                        }
+                    </script>
+                     <input type="checkbox" onclick="mostrarContrasena()"><span style="color: rgb(255, 255, 255);">
+                        Mostrar Contraseña</span>
+                        <div class="form-group mb-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required>
+                                <label class="form-check-label text-muted">
+                                    <font color=white>Al seleccionar esta casilla aceptas nuestro aviso de privacidad y
+                                        los términos y condiciones
+                                </label></font>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" name="grabar" class="btn btn-primary btn-block" required>Registrar</button>
+                        </div><br>
+                        <div class="d-grid gap-2">
+                            <a href="index.html" class="btn btn-primary btn-block">Volver a Inicio</a>
+                        </div>                        
+                    </form>
+                    <small class="d-inline-block text-muted mt-5">
+                        <font color=white>Todos los derechos reservados | © 2023 EiseGroup</font>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="funn.js.js"></script>
+    <script src="Welcomer.js"></script>
+    <script type="text/javascript">
+        function confirmation() {
+            if (confirm("Esta seguro de los datos ingresados???")) {
+                return true(alert("Datos Recibidos"));
+            }
+            else {
+                return false(alert("VERIFICAR BIEN SUS DATOS INGRESADOS PORFAVOR, YA PUEDE INGRESAR AL SISTEMA"));
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
