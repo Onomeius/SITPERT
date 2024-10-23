@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background-image: url(../images/fon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main{
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.contenedor__todo{
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.caja__trasera{
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  opacity: 0.85;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: #0d607c8f;
+  border-top-right-radius: 85px;
+  border-bottom-left-radius: 86px;
+
+}
+
+.caja__trasera div{
+  margin: 100px 105px;
+  color: white;
+  transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+  margin-top: 30px;
+}
+
+.caja__trasera div h3{
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.caja__trasera div p{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.caja__trasera button{
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+  background: #fff;
+  color: #46A2FD;
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+
+  /*La transicion va despues del codigo JS*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+  border: 2px solid black;
+  width: 100%;
+  padding: 40px 20px;
+  background: linear-gradient(to left, #7fdae0, #3eadad, #03666d);
+  position: absolute;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.contenedor__login-register form h2{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contenedor__login-register form input{
+  width: 80%;
+  margin-top: 20px;
+  margin-left: 9%;
+  padding: 10px;
+ opacity: 0.8;
+  background: #ffffff;
+  border: 1px solid black;
+  font-size: 20px;
+  outline: none;
+  text-align: left;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius:  10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius:  10px;
+}
+
+.contenedor__login-register form button{
+  color: rgb(0, 0, 0);
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-left: 2%;
+  cursor: pointer;
+  font-size: 20px;
+  border-top-left-radius: 86px;
+  border-bottom-right-radius: 86px;
+  border-top-right-radius: 85px;
+  border-bottom-left-radius: 86px;
+  padding: 2%;
+  margin-top: 2px;
+
+}
+
+.my-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  flex: 1 0 50%;
+} 
+
+
+.formulario__login{
+  opacity: 1;
+  display: block;
+}
+.formulario__register{
+  display: none;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+  main{
+      margin-top: 50px;
+  }
+
+  .caja__trasera{
+      max-width: 350px;
+      height: 300px;
+      flex-direction: column;
+      margin: auto;
+  }
+
+  .caja__trasera div{
+      margin: 0px;
+      position: absolute;
+  }
+
+
+  /*Formularios*/
+
+  .contenedor__login-register{
+      top: -10px;
+      left: -5px;
+      margin: auto;
+  }
+
+  .contenedor__login-register form{
+      position: relative;
+  }
+}
+
+.form__titulo {
+  border: 2px solid black;
+  background: #0d607c;
+  color: white;
+  padding: 5px;
+  margin-top: -65px;
+  text-align: center;
+  font-weight: 100px;
+  font-size: 28px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 7px;
+  border-top-right-radius: 100px;
+  border-radius: 15px;
+}
+
+.contenedor__login-register form button:active{
+  transform: scale(1.05);
+}
+.campo {
+  position: relative;
+}
+
+.campo span {
+  position: absolute;
+  right: 15%;
+  top: 30%;
+  color: black;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 3.2% 2px;
+  border-radius: 5px ;
+  -webkit-border-radius: 7px ;
+  -moz-border-radius: 5px ;
+  -ms-border-radius: 5px ;
+  -o-border-radius: 5px ;
+}
+
+.form__link {
+
+  color: rgb(43, 41, 41);
+  text-align: center;
+}
+
+.video{
+position: relative;
+z-index: 999;
+border: 2px solid white;
+border-radius: 20px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+-ms-border-radius: 20px;
+-o-border-radius: 20px;
+}
